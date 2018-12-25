@@ -43,8 +43,8 @@ if flag:
 			# print(fnamelist[i], lnamelist[i], 'T:'+files_pathlist[i][33:]+ '\\')
 			fname = fnamelist[i]
 			lname = lnamelist[i]
-			# files_path = 'T:'+files_pathlist[i][33:]+ '\\'
-			files_path = r"C:\bb\cc"
+			files_path = 'T:'+files_pathlist[i][33:]+ '\\'
+			# files_path = r"C:\bb\cc"
 
 			rarfullname = rarfilepath +'\\'+ lname + ' ' +fname + '.rar'
 			rarcmd = r'C:\Program Files\WinRAR\WinRAR.exe'
