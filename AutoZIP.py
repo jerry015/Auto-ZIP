@@ -7,6 +7,7 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import PySimpleGUI as sg
 
+sleeptime = 5
 flag = True
 source_file = None
 source_file = sg.PopupGetFile("请选择数据源文件：")
@@ -58,27 +59,27 @@ if flag:
 						filecount = filecount + 1
 						cmd = [rarcmd, 'a', '-ep', '-hp'+rarpasswd, rarfullname, os.path.join(current_path, file)]
 						sp = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-						time.sleep(1)
+						time.sleep(sleeptime)
 					if ("Employment Contract" in file) and ('.pdf' in file):
 						filecount = filecount + 1
 						cmd = [rarcmd, 'a', '-ep', '-hp'+rarpasswd, rarfullname, os.path.join(current_path, file)]
 						sp = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-						time.sleep(1)
+						time.sleep(sleeptime)
 					if ('Cover' in file) and ('.pdf' in file):
 						filecount = filecount + 1
 						cmd = [rarcmd, 'a', '-ep', '-hp'+rarpasswd, rarfullname, os.path.join(current_path, file)]
 						sp = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-						time.sleep(1)
+						time.sleep(sleeptime)
 					if ('Checklist' in file) and ('.pdf' in file):
 						filecount = filecount + 1
 						cmd = [rarcmd, 'a', '-ep', '-hp'+rarpasswd, rarfullname, os.path.join(current_path, file)]
 						sp = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-						time.sleep(1)
+						time.sleep(sleeptime)
 					if ('form' in file) and ('.xlsx' in file):
 						filecount = filecount + 1
 						cmd = [rarcmd, 'a', '-ep', '-hp'+rarpasswd, rarfullname, os.path.join(current_path, file)]
 						sp = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-						time.sleep(1)
+						time.sleep(sleeptime)
 			if filecount == 5:
 				filecount = 0
 			else:
